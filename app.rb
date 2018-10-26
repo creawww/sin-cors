@@ -3,6 +3,11 @@ require 'sinatra/reloader' if development?
 require 'net/http'
 require 'json'
 
+set :bind, '0.0.0.0'
+configure do
+  enable :cross_origin
+end
+
 before do
    content_type :json
    response.headers['Access-Control-Allow-Origin'] = 'https://creawww.com'
