@@ -12,7 +12,6 @@ before do
    content_type :json
    response.headers['Access-Control-Allow-Origin'] = 'https://creawww.com'
    end
-end
 
 get '/' do
   if params["url"]
